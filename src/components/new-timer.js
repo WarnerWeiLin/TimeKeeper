@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from ' react-redux';
+import { connect } from 'react-redux';
 import { addTimer } from '../actions';
 
 class NewTimer extends Component {
@@ -7,7 +7,6 @@ class NewTimer extends Component {
     super(props)
     this.state = {name: ''}
   }
-
 
   render () {
     return (

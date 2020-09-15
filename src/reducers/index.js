@@ -7,3 +7,4 @@ export default combineReducers({
   timers: timerReducer,              // array
   selectedTimer: selectTimerReducer, // int/number
 });
+
