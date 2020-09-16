@@ -5,8 +5,19 @@ import reducers from './reducers';
 import './App.css';
 import NewTimer from './components/new-timer'
 import ListTimers from './list-timers'
+import { update } from './actions'
+
 
 const store = createStore(reducers);
+
+let lastUpdateTime = Date.now()
+setInterval(() => {
+  const now = Date.now();
+  const deltaTime = now - lastUpdateTime;
+  lastUpdateTime = now;
+  store.dispatch(update(deltaTime))
+}, 50)
+
 
 class App extends Component {
   render(){
